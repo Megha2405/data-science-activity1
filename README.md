@@ -11,14 +11,16 @@ Write a Python program to select the 'name' and 'score' columns from the followi
           'attempts': [1, 3, 4, 3, 5, 3, 6, 1, 7, 1] }
 
 [ ]
-import numpy as np
-import pandas as pd
-exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
+```import numpy as np
+  import pandas as pd
+  exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
              'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19],
              'attempts': [1, 3, 4, 3, 5, 3, 6, 1, 7, 1]}
-df=pd.DataFrame(exam_data)
-result=df[['name','score']]
-print(result)
+  df=pd.DataFrame(exam_data)
+  result=df[['name','score']]
+  print(result)
+```
+```
         name  score
 0  Anastasia   12.5
 1       Dima    9.0
@@ -30,11 +32,12 @@ print(result)
 7      Laura    NaN
 8      Kevin    8.0
 9      Jonas   19.0
+```
 For the above dataframe, Write a program to select the data who's attempt is greater than 3.
 
 
 [ ]
-import numpy as np
+```import numpy as np
 import pandas as pd
 exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
              'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19],
@@ -42,13 +45,15 @@ exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Micha
 df=pd.DataFrame(exam_data)
 result=df[(df['attempts']>3)]
 print(result)
+```
 
-
+```
         name  score  attempts
 2  Katherine   16.5         4
 4      Emily    9.0         5
 6    Matthew   14.5         6
 8      Kevin    8.0         7
+```
 Write python code for indexing rows and columns based on the following conditions:
 
 Assume we have the following dataframe:
@@ -72,7 +77,7 @@ d. Select columns 'name' and 'age'
 
 
 [ ]
-import pandas as pd
+```import pandas as pd
 import numpy as np
 data = {'name': ['Alice', 'Bob', 'Charlie', 'Dave'],
 
@@ -94,8 +99,9 @@ print(c)
 print("select the columns name and age")
 d=df[['name','age']]
 print(d)
+```
 
-
+```
 where age is greater than 30
       name  age gender  salary
 1      Bob   35      M   70000
@@ -115,6 +121,7 @@ select the columns name and age
 1      Bob   35
 2  Charlie   40
 3     Dave   28
+```
 ACTIVITY 2:
 
 Write python code for indexing rows and columns using iloc or loc method based on the following conditions:
@@ -134,7 +141,7 @@ e. Select columns 'education' and 'blanance' where age is less than or equal to 
 
 
 [ ]
-import pandas as pd
+```import pandas as pd
 df=pd.read_csv("/content/bank_train.csv")
 df[(df['education']=='primary')&(df['deposit']=='yes')]
 
@@ -165,4 +172,5 @@ df[(df['job']=='unemployed')&(df['deposit']=='no')]
 
 [ ]
 df[['education','balance']]
+```
 
